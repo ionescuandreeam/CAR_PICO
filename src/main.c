@@ -31,7 +31,7 @@ int main(void)
 
 }
 
-hello word hello
+
 void Init(void)
 {
     gpio_init(2);
