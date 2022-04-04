@@ -21,7 +21,9 @@ void Set_MotorDirection(Motor_Direction direction)
     }
 }
 
-void Set_Speed(uint8 duty_cycle)
+void Car_Speed(uint16 speed)
 {
-    pwm_set_chan_level(slice, channel, wrap * duty_cycle / 100);
+    Pwm_set_DC1_DutyCycle(speed);
+    Pwm_set_DC2_DutyCycle(speed);
+    
 }

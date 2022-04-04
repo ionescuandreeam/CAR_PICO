@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
+#include "cfg.h"
 
 typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef unsigned long int uint32;
 
-#define LOW 0
-#define HIGH 1
+
 
 extern uint8 slice;
 extern uint8 channel;

@@ -2,8 +2,9 @@
 #include "pwm.h"
 #include "GPIO_Pins.h"
 #include "CAR.h"
+// GPIO 6 - Slice 3 Channel 0
 
-uint8 slice = 0;
+uint8 slice = 3;
 uint8 channel = 0;
 uint16 wrap = 0;
 
@@ -11,21 +12,16 @@ int main(void)
 {  
     stdio_init_all();
     InitGPIO();
-    Set_SliceChannel(6);
+    pwm_Init();
 
-    uint8 duty_cycle = 100;
-    wrap = pwm_set_freq_duty(50);
-
-    Set_Speed(duty_cycle);
+    uint8 speed = 100;
     pwm_set_enabled(slice, true);
 
-void Motor1_Speed()
-{
-    
-}
+    void Set_PWM1();
 
     while(true)
     {
         Set_MotorDirection(BACKWARD);
+        Car_Speed(speed);
     }
 }

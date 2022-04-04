@@ -4,7 +4,6 @@
 #include "datatypes.h"
 
 void InitGPIO(void);
-void Set_SliceChannel(uint8 gpio);
 
 
 
