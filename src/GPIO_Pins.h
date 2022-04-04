@@ -1,5 +1,5 @@
-#ifndef GPIO_H
-#define GPIO_H
+#ifndef GPIO_Pins_H
+#define GPIO_Pins_H
 
 #include "datatypes.h"
 

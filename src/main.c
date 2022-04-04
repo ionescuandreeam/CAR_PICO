@@ -1,6 +1,6 @@
 #include "datatypes.h"
 #include "pwm.h"
-#include "GPIO.H"
+#include "GPIO_Pins.h"
 #include "CAR.H"
 
 uint8 slice = 0;
