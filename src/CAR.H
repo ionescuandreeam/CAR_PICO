@@ -3,7 +3,8 @@
 
 #include "datatypes.h"
 
-void MotorDirection(Motor_Direction direction);
+void Set_MotorDirection(Motor_Direction direction);
+void Set_Speed(uint8 duty_cycle);
 
 
 

@@ -14,6 +14,7 @@ typedef unsigned long int uint32;
 
 extern uint8 slice;
 extern uint8 channel;
+extern uint16 wrap;
 
 typedef enum
 {
