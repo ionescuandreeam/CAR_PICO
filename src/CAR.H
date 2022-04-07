@@ -2,9 +2,10 @@
 #define CAR_H
 
 #include "datatypes.h"
+#include "pwm.h"
 
 extern void Set_MotorDirection(Motor_Direction direction);
-extern void void Car_Speed(uint16 speed);
+extern void Car_Speed(uint8 speed);
 
 
 

@@ -21,7 +21,7 @@ void Set_MotorDirection(Motor_Direction direction)
     }
 }
 
-void Car_Speed(uint16 speed)
+void Car_Speed(uint8 speed)
 {
     Pwm_set_DC1_DutyCycle(speed);
     Pwm_set_DC2_DutyCycle(speed);

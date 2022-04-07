@@ -7,16 +7,22 @@ static uint16 channel_DC2;
 static uint16 wrap_DC1;
 static uint16 wrap_DC2;
 
+static uint32 pwm_set_freq_duty_DC(uint8 slice, uint32 wanted_freq);
+
+
 void pwm_Init()
 {
     slice_DC1 = pwm_gpio_to_slice_num(GPIO_DC1);
     channel_DC1 = pwm_gpio_to_channel(GPIO_DC1);
 
-    slice_DC2 = pwm_gpio_to_slice_num(GPIO_DC1);
-    channel_DC2 = pwm_gpio_to_channel(GPIO_DC1);
+    slice_DC2 = pwm_gpio_to_slice_num(GPIO_DC2);
+    channel_DC2 = pwm_gpio_to_channel(GPIO_DC2);
 
     wrap_DC1 = pwm_set_freq_duty_DC(slice_DC1, PWM_FREQ_MOT);
     wrap_DC2 = pwm_set_freq_duty_DC(slice_DC2, PWM_FREQ_MOT);
+
+    pwm_set_enabled(slice_DC1, true);
+    pwm_set_enabled(slice_DC2, true);
 }
 
 
