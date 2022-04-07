@@ -27,3 +27,8 @@ void Car_Speed(uint8 speed)
     Pwm_set_DC2_DutyCycle(speed);
     
 }
+
+void Car_ServoDirection(float degree)
+{
+    Pwm_set_SERVO_DutyCycle(degree);
+}

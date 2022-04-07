@@ -5,6 +5,7 @@ void InitGPIO(void)
 {
     gpio_set_function(GPIO_DC1, GPIO_FUNC_PWM);
     gpio_set_function(GPIO_DC2, GPIO_FUNC_PWM);
+    gpio_set_function(GPIO_SERVO, GPIO_FUNC_PWM);
 
     gpio_init(2);
     gpio_set_dir(2, GPIO_OUT);
